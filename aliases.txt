@@ -1,0 +1,15 @@
+
+alias aa='alias'
+alias ec="nvim $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"
+alias ggb="git branch"
+alias ggs="git status"
+alias gga='git add .'
+alias ggm='git branch -M main'
+alias ll="ls -alth"
+alias ppz='pip freeze'
+alias ggl='git log --graph --all --decorate --full-history'
+alias ytdlp='yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "__"
+alias cpmk='cp -ru ~/.password-store/* ~/Projects/myRules/pass_keys'
+alias rmdo='sudo docker rm -v $(sudo docker ps -aq -f status=exited)'
+alias oop='sudo openvpn ~/vpn/RR.ovpn'

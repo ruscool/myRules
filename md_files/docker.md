@@ -25,3 +25,18 @@ sudo docker run -it -h testServer --name testS -v $(pwd)/obmen:/home/obmen/ ubun
 ## step - create with Dockerfile
 
 docker build -t "name/name.image" . - dot
+
+---
+
+# text run docker psql
+
+docker run -d --rm --name some-postgres \  INT ✘
+-e POSTGRES_PASSWORD=2611Server \
+-e PGDATA=/var/lib/postgresql/data/pgdata \
+-v /home/rusdev/Projects/Podelki/post:/var/lib/postgresql/data \
+-p 50432:5432 \
+postgres
+
+---
+
+## docker-compose - file docker-compose.yml
