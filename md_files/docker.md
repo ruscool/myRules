@@ -30,7 +30,7 @@ docker build -t "name/name.image" . - dot
 
 # text run docker psql
 
-docker run -d --rm --name some-postgres \  INT ✘
+docker run -d --rm --name some-postgres \
 -e POSTGRES_PASSWORD=2611Server \
 -e PGDATA=/var/lib/postgresql/data/pgdata \
 -v /home/rusdev/Projects/Podelki/post:/var/lib/postgresql/data \
@@ -39,4 +39,21 @@ postgres
 
 ---
 
+---
+
 ## docker-compose - file docker-compose.yml
+
+version: '3.5'
+
+services:
+db_auth:
+container_name: db_auth
+ports: - "50432:5432"
+environment: - POSTGRES_PASSWORD=root - POSTGRES_USER=admin
+image: postgres:15.1
+
+--- next step
+
+docker-compose up --built
+
+---
