@@ -1,0 +1,40 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+export PATH=/home/rusdev/.python3.11/bin:$PATH
+
+alias aa='alias'
+alias ec="nvim $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"
+alias ggb="git branch"
+alias ggs="git status"
+alias gga='git add .'
+alias ggm='git branch -M main'
+alias ll="ls -alth"
+alias ppz='pip freeze'
+alias ggl='git log --graph --all --decorate --full-history'
+alias aal='nvim ~/Projects/myRules/aliases.txt'
+alias cpmk='cp -ru ~/.password-store/* ~/Projects/myRules/pass_keys'
+alias dorm='sudo docker rm -v $(sudo docker ps -aq -f status=exited)'
+alias oop='sudo openvpn ~/vpn/Ruslan_R.ovpn'
+alias doim='sudo docker images'
+alias dops='sudo docker ps'
+alias dopa='sudo docker ps -a'
+alias doup='sudo docker-compose up'
+alias down='sudo docker-compose down'
+alias nvsu='python3 -c "import sys; print(sys.path)"'
+alias colua='nvim ~/.config/nvim/lua/user/init.lua'
+alias cdm='cd ~/Music/'
+alias cdv='cd ~/Videos/'
+alias cdl='cd ~/LessonsVideo//'
+alias cdb='cd ~/Downloads/Books/'
+alias cdp='cd ~/Projects/'
+alias cpi='cp ~/Projects/.gitignore . && cp ~/Projects/requirements.txt .'

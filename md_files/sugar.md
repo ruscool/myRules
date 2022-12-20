@@ -21,3 +21,7 @@ for i in \*.wav; do ffmpeg -i "$i" "$i".flac; done - in terminal
 <https://github.com/Sound-Linux-More/sacd.git>
 
 ---
+
+# path python
+
+python3 -c "import sys; print('\n'.join(sys.path))"
