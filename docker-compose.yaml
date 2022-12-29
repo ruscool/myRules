@@ -1,16 +1,18 @@
 version: "3.5"
 
 services:
-  db_auth:
-    container_name: db_auth
+  database:
+    container_name: postgres
     restart: always
     ports:
-      - "50432:5432"
+      - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=2611Server
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=testsystem
       - PGDATA=/var/lib/postgresql/data/
     volumes:
-      - /home/rusdev/vpn/Data:/var/lib/postgresql/data
+      - /home/rusdev/vpn/data:/var/lib/postgresql/data
+      - /home/userpro/socket:/var/run/postgresql  
     image: postgres:15.1
+  
